@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -12,6 +13,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static ha_sus_ck_sex.WeatherHandler;
+using System.Xml.Linq;
+using Newtonsoft.Json.Linq;
 
 namespace ha_sus_ck_sex
 {
@@ -23,6 +27,7 @@ namespace ha_sus_ck_sex
         public MainWindow()
         {
             InitializeComponent();
+            WeatherHandler weatherHandler = new WeatherHandler();
         }
 
         protected override void OnInitialized(EventArgs e)
@@ -36,6 +41,8 @@ namespace ha_sus_ck_sex
             // Set the window's position
             this.Left = screenWidth - this.Width - 20;
             this.Top = screenHeight - this.Height - 20;
+
+            
         }
 
         private void ChatButton_Click(object sender, RoutedEventArgs e)
@@ -45,3 +52,6 @@ namespace ha_sus_ck_sex
         }
     }
 }
+        
+    
+
