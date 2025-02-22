@@ -27,6 +27,10 @@ namespace ha_sus_ck_sex
         private Image CatGif;
         private BitmapImage idleImage;
         private BitmapImage talkingImage;
+        UserInputSpeechBubble userInputSpeechBubble;
+
+        private Queue<String> textQueue = new Queue<String>();
+        private bool textPlaying = false;
 
         public SpeechBubble(double[] pos,Image CatGif)
         {
@@ -45,11 +49,24 @@ namespace ha_sus_ck_sex
             talkingImage.UriSource = new Uri("pack://application:,,,/Resources/speaking-cat.gif");
             talkingImage.EndInit();
 
-            StartTextAnimation();
+            userInputSpeechBubble = new UserInputSpeechBubble(new double[] { this.Left - 50, this.Top + 200 });
+
+            StartTextAnimation(fullText);
+            StartTextAnimation(fullText);
         }
 
-        private void StartTextAnimation ()
+        private void StartTextAnimation(String FullText)
         {
+            if (textPlaying)
+            {
+                textQueue.Enqueue(FullText);
+                return;
+            }
+            textPlaying = true;
+            ChatBox.Text = "";
+            charIndex = 0;
+            userInputSpeechBubble.Hide();
+            this.fullText = FullText;
             textTimer = new DispatcherTimer();
             textTimer.Interval = TimeSpan.FromMilliseconds(20); // Adjust the interval as needed
             textTimer.Tick += UpdateText;
@@ -67,9 +84,15 @@ namespace ha_sus_ck_sex
             else
             {
                 textTimer.Stop();
-                UserInputSpeechBubble userInputSpeechBubble = new UserInputSpeechBubble(new double[] { this.Left-50, this.Top + 200 });
+                
                 userInputSpeechBubble.Show();
                 ImageBehavior.SetAnimatedSource(CatGif, idleImage);
+
+                textPlaying = false;
+                if (textQueue.Count > 0)
+                {
+                    StartTextAnimation(textQueue.Dequeue());
+                }
             }
         }
     }
