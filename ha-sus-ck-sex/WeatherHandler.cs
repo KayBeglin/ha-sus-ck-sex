@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-
 
 namespace ha_sus_ck_sex
 {
@@ -11,35 +13,97 @@ namespace ha_sus_ck_sex
 
         public WeatherHandler()
         {
-            GetWeather();
+            GetTempData();
         }
 
-        public async void GetWeather()
+        public async void GetTempData()
         {
-            Console.WriteLine(await GetJsonAsync("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m"));
+            string tempData = await GetJsonAsync("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m,rain,snowfall&forecast_days=1");
+            if (tempData != null)
+            {
+                // Format the JSON data
+                string formattedJson = FormatJson(tempData);
+
+                // Parse the JSON data and store it in a dictionary
+                Dictionary<string, (double Temperature, double Rain, double Snowfall)> tempDictionary = ParseWeatherData(tempData);
+
+                // Print the dictionary contents to the console
+                foreach (var entry in tempDictionary)
+                {
+                    Console.WriteLine($"Time: {entry.Key}, Temperature: {entry.Value.Temperature}°C, Rain: {entry.Value.Rain}mm, Snow: {entry.Value.Snowfall}mm");
+                }
+            }
         }
+
 
         public static async Task<string> GetJsonAsync(string url)
         {
             try
             {
-                // Make an asynchronous GET request
                 HttpResponseMessage response = await client.GetAsync(url);
-
-                // Ensure the request was successful
                 response.EnsureSuccessStatusCode();
-
-                // Read the response content as a string
                 string jsonData = await response.Content.ReadAsStringAsync();
-
                 return jsonData;
             }
             catch (HttpRequestException e)
             {
-                // Handle any errors that occur during the request
                 Console.WriteLine($"Request error: {e.Message}");
                 return null;
             }
+        }
+
+        private string FormatJson(string json)
+        {
+            try
+            {
+                var parsedJson = JToken.Parse(json);
+                return parsedJson.ToString(Newtonsoft.Json.Formatting.Indented);
+            }
+            catch (JsonReaderException e)
+            {
+                Console.WriteLine($"JSON format error: {e.Message}");
+                return json;
+            }
+        }
+
+        private Dictionary<string, (double Temperature, double Rain, double Snowfall)> ParseWeatherData(string jsonData)
+        {
+            var weatherDictionary = new Dictionary<string, (double Temperature, double Rain, double Snowfall)>();
+
+            try
+            {
+                // Parse the JSON data
+                JObject json = JObject.Parse(jsonData);
+
+                // Extract the time and temperature information
+                var times = json["hourly"]?["time"]?.Values<string>();
+                var temperatures = json["hourly"]?["temperature_2m"]?.Values<double>();
+                var rain = json["hourly"]?["rain"]?.Values<double>();
+                var snowfall = json["hourly"]?["snowfall"]?.Values<double>();
+                if (times == null || temperatures == null || rain == null || snowfall == null)
+                {
+                    Console.WriteLine("Error: Missing 'time', 'temperature_2m', 'rain' or 'snowfall' data in JSON response.");
+                    return weatherDictionary;
+                }
+
+                // Store the time and temperature data in the dictionary
+                using (var timeEnumerator = times.GetEnumerator())
+                using (var tempEnumerator = temperatures.GetEnumerator())
+                using (var rainEnumerator = rain.GetEnumerator())
+                using (var snowfallEnumerator = snowfall.GetEnumerator())
+                {
+                    while (timeEnumerator.MoveNext() && tempEnumerator.MoveNext() && rainEnumerator.MoveNext() && snowfallEnumerator.MoveNext())
+                    {
+                        weatherDictionary[timeEnumerator.Current] = (tempEnumerator.Current, rainEnumerator.Current, snowfallEnumerator.Current);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"JSON parsing error: {e.Message}");
+            }
+
+            return weatherDictionary;
         }
     }
 }
