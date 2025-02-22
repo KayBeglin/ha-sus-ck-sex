@@ -61,6 +61,9 @@
     <Compile Include="SpeechBubble.xaml.cs">
       <DependentUpon>SpeechBubble.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserInputSpeechBubble.xaml.cs">
+      <DependentUpon>UserInputSpeechBubble.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -74,6 +77,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="SpeechBubble.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserInputSpeechBubble.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -106,13 +113,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\ElliotSon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\i-sleep-now-cat-cat-slee.gif" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\speech-bubble.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\speech-bubble-inv.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
