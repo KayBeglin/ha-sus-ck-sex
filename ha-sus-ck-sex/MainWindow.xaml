@@ -20,7 +20,7 @@
             <RowDefinition Height="250"/>
             <RowDefinition />
         </Grid.RowDefinitions>
-        <Image Grid.Column="2" Name="GifBackground" gif:ImageBehavior.AnimatedSource="pack://application:,,,/Resources/i-sleep-now-cat-cat-slee.gif" Height="250" Width="250" />
+        <Image Grid.Column="2" Name="GifBackground" gif:ImageBehavior.AnimatedSource="pack://application:,,,/Resources/idle-cat.gif" Height="250" Width="250" />
         <StackPanel Grid.Row="1" Grid.ColumnSpan="2">
         <Button x:Name="ChatButton" Content="Chat"
           Margin="5" Width="100" Height="40"
