@@ -34,8 +34,8 @@ namespace ha_sus_ck_sex
             var screenHeight = SystemParameters.WorkArea.Height;
 
             // Set the window's position
-            this.Left = screenWidth - this.Width;
-            this.Top = screenHeight - this.Height;
+            this.Left = screenWidth - this.Width - 20;
+            this.Top = screenHeight - this.Height - 20;
         }
     }
 }
