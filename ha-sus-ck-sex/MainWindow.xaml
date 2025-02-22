@@ -4,9 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ha_sus_ck_sex"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="196" Width="169">
+    <!--<Window.Background>
+        <ImageBrush ImageSource="pack://application:,,,/Resources/ElliotSon.png"/>
+    </Window.Background>-->
     <Grid>
-        
+        <Image gif:ImageBehavior.AnimatedSource="pack://application:,,,/Resources/i-sleep-now-cat-cat-slee.gif" />
     </Grid>
 </Window>
