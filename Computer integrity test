@@ -1,0 +1,5 @@
+true = True
+number = 0
+while true:
+  number = number + 1
+  print (number)
