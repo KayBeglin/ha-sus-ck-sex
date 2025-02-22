@@ -3,23 +3,31 @@
   "WorkspaceRootPath": "C:\\Users\\tomgo\\source\\repos\\ha-sus-ck-sex\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{81DA6261-E295-4826-9BC2-1986A2CDA511}|ha-sus-ck-sex\\ha-sus-ck-sex.csproj|c:\\users\\tomgo\\source\\repos\\ha-sus-ck-sex\\ha-sus-ck-sex\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81DA6261-E295-4826-9BC2-1986A2CDA511}|ha-sus-ck-sex\\ha-sus-ck-sex.csproj|solutionrelative:ha-sus-ck-sex\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{81DA6261-E295-4826-9BC2-1986A2CDA511}|ha-sus-ck-sex\\ha-sus-ck-sex.csproj|c:\\users\\tomgo\\source\\repos\\ha-sus-ck-sex\\ha-sus-ck-sex\\speechbubble.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81DA6261-E295-4826-9BC2-1986A2CDA511}|ha-sus-ck-sex\\ha-sus-ck-sex.csproj|solutionrelative:ha-sus-ck-sex\\speechbubble.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|ha-sus-ck-sex||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81DA6261-E295-4826-9BC2-1986A2CDA511}|ha-sus-ck-sex\\ha-sus-ck-sex.csproj|c:\\users\\tomgo\\source\\repos\\ha-sus-ck-sex\\ha-sus-ck-sex\\userinputspeechbubble.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{81DA6261-E295-4826-9BC2-1986A2CDA511}|ha-sus-ck-sex\\ha-sus-ck-sex.csproj|solutionrelative:ha-sus-ck-sex\\userinputspeechbubble.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81DA6261-E295-4826-9BC2-1986A2CDA511}|ha-sus-ck-sex\\ha-sus-ck-sex.csproj|c:\\users\\tomgo\\source\\repos\\ha-sus-ck-sex\\ha-sus-ck-sex\\userinputspeechbubble.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81DA6261-E295-4826-9BC2-1986A2CDA511}|ha-sus-ck-sex\\ha-sus-ck-sex.csproj|solutionrelative:ha-sus-ck-sex\\userinputspeechbubble.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81DA6261-E295-4826-9BC2-1986A2CDA511}|ha-sus-ck-sex\\ha-sus-ck-sex.csproj|c:\\users\\tomgo\\source\\repos\\ha-sus-ck-sex\\ha-sus-ck-sex\\speechbubble.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{81DA6261-E295-4826-9BC2-1986A2CDA511}|ha-sus-ck-sex\\ha-sus-ck-sex.csproj|solutionrelative:ha-sus-ck-sex\\speechbubble.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{81DA6261-E295-4826-9BC2-1986A2CDA511}|ha-sus-ck-sex\\ha-sus-ck-sex.csproj|c:\\users\\tomgo\\source\\repos\\ha-sus-ck-sex\\ha-sus-ck-sex\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{81DA6261-E295-4826-9BC2-1986A2CDA511}|ha-sus-ck-sex\\ha-sus-ck-sex.csproj|solutionrelative:ha-sus-ck-sex\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|ha-sus-ck-sex||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81DA6261-E295-4826-9BC2-1986A2CDA511}|ha-sus-ck-sex\\ha-sus-ck-sex.csproj|c:\\users\\tomgo\\source\\repos\\ha-sus-ck-sex\\ha-sus-ck-sex\\speechbubble.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81DA6261-E295-4826-9BC2-1986A2CDA511}|ha-sus-ck-sex\\ha-sus-ck-sex.csproj|solutionrelative:ha-sus-ck-sex\\speechbubble.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81DA6261-E295-4826-9BC2-1986A2CDA511}|ha-sus-ck-sex\\ha-sus-ck-sex.csproj|c:\\users\\tomgo\\source\\repos\\ha-sus-ck-sex\\ha-sus-ck-sex\\speechbubble.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{81DA6261-E295-4826-9BC2-1986A2CDA511}|ha-sus-ck-sex\\ha-sus-ck-sex.csproj|solutionrelative:ha-sus-ck-sex\\speechbubble.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{81DA6261-E295-4826-9BC2-1986A2CDA511}|ha-sus-ck-sex\\ha-sus-ck-sex.csproj|c:\\users\\tomgo\\source\\repos\\ha-sus-ck-sex\\ha-sus-ck-sex\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81DA6261-E295-4826-9BC2-1986A2CDA511}|ha-sus-ck-sex\\ha-sus-ck-sex.csproj|solutionrelative:ha-sus-ck-sex\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{81DA6261-E295-4826-9BC2-1986A2CDA511}|ha-sus-ck-sex\\ha-sus-ck-sex.csproj|c:\\users\\tomgo\\source\\repos\\ha-sus-ck-sex\\ha-sus-ck-sex\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
@@ -32,11 +40,53 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "UserInputSpeechBubble.xaml",
+              "DocumentMoniker": "C:\\Users\\tomgo\\source\\repos\\ha-sus-ck-sex\\ha-sus-ck-sex\\UserInputSpeechBubble.xaml",
+              "RelativeDocumentMoniker": "ha-sus-ck-sex\\UserInputSpeechBubble.xaml",
+              "ToolTip": "C:\\Users\\tomgo\\source\\repos\\ha-sus-ck-sex\\ha-sus-ck-sex\\UserInputSpeechBubble.xaml",
+              "RelativeToolTip": "ha-sus-ck-sex\\UserInputSpeechBubble.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-22T16:34:20.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SpeechBubble.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\tomgo\\source\\repos\\ha-sus-ck-sex\\ha-sus-ck-sex\\SpeechBubble.xaml.cs",
+              "RelativeDocumentMoniker": "ha-sus-ck-sex\\SpeechBubble.xaml.cs",
+              "ToolTip": "C:\\Users\\tomgo\\source\\repos\\ha-sus-ck-sex\\ha-sus-ck-sex\\SpeechBubble.xaml.cs",
+              "RelativeToolTip": "ha-sus-ck-sex\\SpeechBubble.xaml.cs",
+              "ViewState": "AgIAAAAAAADALDMzMzPbvxYAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T14:24:20.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserInputSpeechBubble.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\tomgo\\source\\repos\\ha-sus-ck-sex\\ha-sus-ck-sex\\UserInputSpeechBubble.xaml.cs",
+              "RelativeDocumentMoniker": "ha-sus-ck-sex\\UserInputSpeechBubble.xaml.cs",
+              "ToolTip": "C:\\Users\\tomgo\\source\\repos\\ha-sus-ck-sex\\ha-sus-ck-sex\\UserInputSpeechBubble.xaml.cs",
+              "RelativeToolTip": "ha-sus-ck-sex\\UserInputSpeechBubble.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T16:38:14.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ha-sus-ck-sex",
               "DocumentMoniker": "C:\\Users\\tomgo\\source\\repos\\ha-sus-ck-sex\\ha-sus-ck-sex\\ha-sus-ck-sex.csproj",
               "RelativeDocumentMoniker": "ha-sus-ck-sex\\ha-sus-ck-sex.csproj",
@@ -44,19 +94,6 @@
               "RelativeToolTip": "ha-sus-ck-sex\\ha-sus-ck-sex.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-02-22T15:55:34.304Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SpeechBubble.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\tomgo\\source\\repos\\ha-sus-ck-sex\\ha-sus-ck-sex\\SpeechBubble.xaml.cs",
-              "RelativeDocumentMoniker": "ha-sus-ck-sex\\SpeechBubble.xaml.cs",
-              "ToolTip": "C:\\Users\\tomgo\\source\\repos\\ha-sus-ck-sex\\ha-sus-ck-sex\\SpeechBubble.xaml.cs",
-              "RelativeToolTip": "ha-sus-ck-sex\\SpeechBubble.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T14:24:20.369Z",
               "EditorCaption": ""
             },
             {
@@ -72,12 +109,8 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\tomgo\\source\\repos\\ha-sus-ck-sex\\ha-sus-ck-sex\\MainWindow.xaml",
               "RelativeDocumentMoniker": "ha-sus-ck-sex\\MainWindow.xaml",
@@ -89,13 +122,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\tomgo\\source\\repos\\ha-sus-ck-sex\\ha-sus-ck-sex\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "ha-sus-ck-sex\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\tomgo\\source\\repos\\ha-sus-ck-sex\\ha-sus-ck-sex\\MainWindow.xaml.cs*",
-              "RelativeToolTip": "ha-sus-ck-sex\\MainWindow.xaml.cs*",
-              "ViewState": "AgIAABkAAAAAAAAAAAD4vyoAAABlAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\tomgo\\source\\repos\\ha-sus-ck-sex\\ha-sus-ck-sex\\MainWindow.xaml.cs",
+              "RelativeToolTip": "ha-sus-ck-sex\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAA8AAABgMTMzM3MiwBgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-22T12:58:24.889Z",
               "EditorCaption": ""
