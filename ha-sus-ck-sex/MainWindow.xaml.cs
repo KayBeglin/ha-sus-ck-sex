@@ -24,5 +24,18 @@ namespace ha_sus_ck_sex
         {
             InitializeComponent();
         }
+
+        protected override void OnInitialized(EventArgs e)
+        {
+            base.OnInitialized(e);
+
+            // Get the primary screen's working area
+            var screenWidth = SystemParameters.WorkArea.Width;
+            var screenHeight = SystemParameters.WorkArea.Height;
+
+            // Set the window's position
+            this.Left = screenWidth - this.Width - 20;
+            this.Top = screenHeight - this.Height - 20;
+        }
     }
 }

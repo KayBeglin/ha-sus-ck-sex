@@ -4,9 +4,26 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ha_sus_ck_sex"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Title="MainWindow" Height="300" Width="500">
+    <Window.Background>
+        <SolidColorBrush Opacity="0" Color="White"/>
+    </Window.Background>
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="250"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Image Grid.Column="2" Name="GifBackground" gif:ImageBehavior.AnimatedSource="pack://application:,,,/Resources/i-sleep-now-cat-cat-slee.gif" Height="250" Width="250" />
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2">
+            
+        </StackPanel>
     </Grid>
 </Window>
