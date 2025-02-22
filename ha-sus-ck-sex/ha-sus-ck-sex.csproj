@@ -82,6 +82,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="PythonHandling.cs" />
     <Compile Include="WeatherHandler.cs" />
     <Compile Include="SpeechBubble.xaml.cs">
       <DependentUpon>SpeechBubble.xaml</DependentUpon>
@@ -160,6 +161,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\idle-cat.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\speaking-cat.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

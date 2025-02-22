@@ -47,7 +47,7 @@ namespace ha_sus_ck_sex
 
         private void ChatButton_Click(object sender, RoutedEventArgs e)
         {
-            SpeechBubble speechBubble = new SpeechBubble(new double[] { this.Left - 80, this.Top - 250 });
+            SpeechBubble speechBubble = new SpeechBubble(new double[] { this.Left - 80, this.Top - 250 }, GifBackground);
             speechBubble.Show();
         }
     }
