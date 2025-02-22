@@ -1,1 +1,1 @@
-print ("Meow wow ha")
+print ("Meow wow")
