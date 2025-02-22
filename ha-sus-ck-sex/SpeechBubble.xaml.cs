@@ -19,9 +19,11 @@ namespace ha_sus_ck_sex
     /// </summary>
     public partial class SpeechBubble : Window
     {
-        public SpeechBubble()
+        public SpeechBubble(double[] pos)
         {
             InitializeComponent();
+            this.Left = pos[0];
+            this.Top = pos[1];
         }
     }
 }

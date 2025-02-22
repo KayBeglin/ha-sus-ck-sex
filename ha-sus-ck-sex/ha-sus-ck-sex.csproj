@@ -106,9 +106,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\ElliotSon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\i-sleep-now-cat-cat-slee.gif" />
   </ItemGroup>
   <ItemGroup>

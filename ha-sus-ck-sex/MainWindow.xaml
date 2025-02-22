@@ -7,11 +7,10 @@
         xmlns:gif="http://wpfanimatedgif.codeplex.com"
         mc:Ignorable="d"
         WindowStyle="None"
+        Background="Transparent"
         ResizeMode="NoResize"
+        AllowsTransparency="True"
         Title="MainWindow" Height="300" Width="500">
-    <Window.Background>
-        <SolidColorBrush Opacity="0" Color="White"/>
-    </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -23,7 +22,10 @@
         </Grid.RowDefinitions>
         <Image Grid.Column="2" Name="GifBackground" gif:ImageBehavior.AnimatedSource="pack://application:,,,/Resources/i-sleep-now-cat-cat-slee.gif" Height="250" Width="250" />
         <StackPanel Grid.Row="1" Grid.ColumnSpan="2">
-            
+        <Button x:Name="ChatButton" Content="Chat"
+          Margin="5" Width="100" Height="40"
+          HorizontalAlignment="Center"
+          Foreground="Black" Click="ChatButton_Click"/>
         </StackPanel>
     </Grid>
 </Window>

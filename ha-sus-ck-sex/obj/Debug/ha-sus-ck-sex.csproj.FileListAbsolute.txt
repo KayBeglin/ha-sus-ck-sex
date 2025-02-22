@@ -17,3 +17,5 @@ C:\Users\tomgo\source\repos\ha-sus-ck-sex\ha-sus-ck-sex\obj\Debug\ha-sus-ck-sex.
 C:\Users\tomgo\source\repos\ha-sus-ck-sex\ha-sus-ck-sex\obj\Debug\ha-sus-c.0E732D95.Up2Date
 C:\Users\tomgo\source\repos\ha-sus-ck-sex\ha-sus-ck-sex\obj\Debug\ha-sus-ck-sex.exe
 C:\Users\tomgo\source\repos\ha-sus-ck-sex\ha-sus-ck-sex\obj\Debug\ha-sus-ck-sex.pdb
+C:\Users\tomgo\source\repos\ha-sus-ck-sex\ha-sus-ck-sex\obj\Debug\SpeechBubble.g.cs
+C:\Users\tomgo\source\repos\ha-sus-ck-sex\ha-sus-ck-sex\obj\Debug\SpeechBubble.baml

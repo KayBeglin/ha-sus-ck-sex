@@ -37,5 +37,11 @@ namespace ha_sus_ck_sex
             this.Left = screenWidth - this.Width - 20;
             this.Top = screenHeight - this.Height - 20;
         }
+
+        private void ChatButton_Click(object sender, RoutedEventArgs e)
+        {
+            SpeechBubble speechBubble = new SpeechBubble(new double[] { this.Left - 80, this.Top - 250 });
+            speechBubble.Show();
+        }
     }
 }
