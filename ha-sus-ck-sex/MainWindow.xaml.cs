@@ -27,7 +27,6 @@ namespace ha_sus_ck_sex
         public MainWindow()
         {
             InitializeComponent();
-            WeatherHandler weatherHandler = new WeatherHandler();
             PythonHandling pythonHandling = new PythonHandling();
         }
 
