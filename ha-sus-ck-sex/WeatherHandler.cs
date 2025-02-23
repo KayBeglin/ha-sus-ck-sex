@@ -2,6 +2,7 @@
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -10,15 +11,22 @@ namespace ha_sus_ck_sex
     public class WeatherHandler
     {
         private static readonly HttpClient client = new HttpClient();
+        private SpeechBubble speechBubble;
+        private string[] weatherArray;
 
-        public WeatherHandler()
+        public WeatherHandler(SpeechBubble speechBubble)
         {
-            GetTempData();
+            this.speechBubble = speechBubble;
         }
 
-        public async void GetTempData()
+        public void OutputData(string city)
         {
-            string city = Console.ReadLine();
+            GetTempData(city);
+        }
+
+        public async void GetTempData(string city)
+        {
+            //string city = Console.ReadLine();
             var (latitude, longitude) = await GetCoordinatesAsync(city);
 
             if (latitude != null && longitude != null)
@@ -35,8 +43,9 @@ namespace ha_sus_ck_sex
                     // Print the dictionary contents to the console
                     foreach (var entry in tempDictionary)
                     {
-                        Console.WriteLine($"Time: {entry.Key}, Temperature: {entry.Value.Temperature}°C, Rain: {entry.Value.Rain}mm, Snow: {entry.Value.Snowfall}mm");
+                        speechBubble.StartTextAnimation($"Time: {entry.Key}, Temperature: {entry.Value.Temperature}°C, Rain: {entry.Value.Rain}mm, Snow: {entry.Value.Snowfall}mm");
                     }
+                    ;
                 }
             }
             else
