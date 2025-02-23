@@ -26,7 +26,7 @@ namespace ha_sus_ck_sex
 
         public async void GetTempData(string city)
         {
-            //string city = Console.ReadLine();
+            
             var (latitude, longitude) = await GetCoordinatesAsync(city);
 
             if (latitude != null && longitude != null)
