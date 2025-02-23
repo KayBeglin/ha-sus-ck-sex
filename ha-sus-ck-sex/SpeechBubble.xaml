@@ -17,7 +17,7 @@
            FontSize="14" Foreground="Black" 
            HorizontalAlignment="Left" VerticalAlignment="Top"
            Padding="10"
-           TextWrapping="Wrap" Width="250"
+           TextWrapping="Wrap" Width="245"
            FontFamily="Arial"/>
         </ScrollViewer>
     </Grid>

@@ -21,6 +21,8 @@ namespace ha_sus_ck_sex
     {
         SpeechBubble speechBubble;
         WeatherHandler weatherHandler;
+        PythonHandling pythonHandling;
+
         public UserInputSpeechBubble(double[] pos, SpeechBubble speechBubble)
         {
             InitializeComponent();
@@ -28,6 +30,7 @@ namespace ha_sus_ck_sex
             this.Top = pos[1];
             this.speechBubble = speechBubble;
             weatherHandler = new WeatherHandler(speechBubble);
+            pythonHandling = new PythonHandling(speechBubble);
         }
 
         protected override void OnContentRendered(EventArgs e)
@@ -51,6 +54,9 @@ namespace ha_sus_ck_sex
                 string weatherPhrase = "What's the weather in ";
                 if (input.StartsWith(weatherPhrase)){
                    weatherHandler.OutputData(input.Substring(weatherPhrase.Length));
+                } else
+                {
+                    pythonHandling.sendMessage(input);
                 }
             }
         }

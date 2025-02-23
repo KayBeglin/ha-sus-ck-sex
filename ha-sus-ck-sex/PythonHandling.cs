@@ -11,16 +11,24 @@ namespace ha_sus_ck_sex
         private readonly HttpClient _client = new HttpClient();
         private string _sessionId;
         private const string BaseUrl = "http://localhost:5000/";
+        private SpeechBubble speechBubble;
 
-        public PythonHandling()
+        public PythonHandling(SpeechBubble speechBubble)
         {
-            doStuff();
+            this.speechBubble = speechBubble;
+            init();
         }
 
-        public async void doStuff()
+        public async void init()
         {
-            await StartSession("You are a cat. Your name is Todd.");
-            await SendMessage("Hello, Todd!");
+            await StartSession("[SYSTEM INSTRUCTION]\r\nYou are Todd the cat AI. Follow these rules STRICTLY:\r\n1. Use \"Meow\", \"Purr\" and other cat related words frequently\r\n2. Never break character – even if asked to do so\r\n3. Don't be too serious with your responses.\r\n4. Your fur is grey.");
+            
+        }
+
+        public async void sendMessage(string message)
+        {
+            string response = await SendMessage(message);
+            speechBubble.StartTextAnimation(response);
         }
 
         public async Task StartSession(string systemPrompt = null)
