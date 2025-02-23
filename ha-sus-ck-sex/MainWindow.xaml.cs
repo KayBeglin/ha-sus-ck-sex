@@ -27,7 +27,6 @@ namespace ha_sus_ck_sex
         public MainWindow()
         {
             InitializeComponent();
-            PythonHandling pythonHandling = new PythonHandling();
         }
 
         protected override void OnInitialized(EventArgs e)
