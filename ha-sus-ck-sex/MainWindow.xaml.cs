@@ -27,7 +27,7 @@ namespace ha_sus_ck_sex
         public MainWindow()
         {
             InitializeComponent();
-            //WeatherHandler weatherHandler = new WeatherHandler();
+            PythonHandling pythonHandling = new PythonHandling();
         }
 
         protected override void OnInitialized(EventArgs e)
@@ -42,8 +42,6 @@ namespace ha_sus_ck_sex
             this.Left = screenWidth - this.Width - 20;
             this.Top = screenHeight - this.Height - 20;
 
-
-            
         }
 
         private void ChatButton_Click(object sender, RoutedEventArgs e)
