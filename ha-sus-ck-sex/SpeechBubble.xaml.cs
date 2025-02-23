@@ -52,7 +52,6 @@ namespace ha_sus_ck_sex
             userInputSpeechBubble = new UserInputSpeechBubble(new double[] { this.Left - 50, this.Top + 200 });
 
             StartTextAnimation(fullText);
-            StartTextAnimation(fullText);
         }
 
         private void StartTextAnimation(String FullText)

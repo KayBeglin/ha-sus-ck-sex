@@ -50,7 +50,7 @@ namespace ha_sus_ck_sex
             try
             {
                 HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, url);
-                request.Headers.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3");
+                request.Headers.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.1; x64; en-US) AppleWebKit/534.11 (KHTML, like Gecko) Chrome/47.0.2412.179 Safari/602");
 
                 HttpResponseMessage response = await client.SendAsync(request);
                 response.EnsureSuccessStatusCode();
