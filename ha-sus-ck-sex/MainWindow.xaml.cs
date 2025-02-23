@@ -27,7 +27,7 @@ namespace ha_sus_ck_sex
         public MainWindow()
         {
             InitializeComponent();
-            WeatherHandler weatherHandler = new WeatherHandler();
+            //WeatherHandler weatherHandler = new WeatherHandler();
         }
 
         protected override void OnInitialized(EventArgs e)

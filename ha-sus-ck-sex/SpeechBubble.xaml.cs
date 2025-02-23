@@ -49,12 +49,12 @@ namespace ha_sus_ck_sex
             talkingImage.UriSource = new Uri("pack://application:,,,/Resources/speaking-cat.gif");
             talkingImage.EndInit();
 
-            userInputSpeechBubble = new UserInputSpeechBubble(new double[] { this.Left - 50, this.Top + 200 });
+            userInputSpeechBubble = new UserInputSpeechBubble(new double[] { this.Left - 50, this.Top + 200 }, this);
 
             StartTextAnimation(fullText);
         }
 
-        private void StartTextAnimation(String FullText)
+        public void StartTextAnimation(String FullText)
         {
             if (textPlaying)
             {
