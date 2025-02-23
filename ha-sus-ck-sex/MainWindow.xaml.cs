@@ -42,6 +42,7 @@ namespace ha_sus_ck_sex
             this.Left = screenWidth - this.Width - 20;
             this.Top = screenHeight - this.Height - 20;
 
+
             
         }
 

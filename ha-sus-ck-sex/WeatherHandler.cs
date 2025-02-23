@@ -18,29 +18,41 @@ namespace ha_sus_ck_sex
 
         public async void GetTempData()
         {
-            string tempData = await GetJsonAsync("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m,rain,snowfall&forecast_days=1");
-            if (tempData != null)
+            string city = Console.ReadLine();
+            var (latitude, longitude) = await GetCoordinatesAsync(city);
+
+            if (latitude != null && longitude != null)
             {
-                // Format the JSON data
-                string formattedJson = FormatJson(tempData);
-
-                // Parse the JSON data and store it in a dictionary
-                Dictionary<string, (double Temperature, double Rain, double Snowfall)> tempDictionary = ParseWeatherData(tempData);
-
-                // Print the dictionary contents to the console
-                foreach (var entry in tempDictionary)
+                string tempData = await GetJsonAsync($"https://api.open-meteo.com/v1/forecast?latitude={latitude}&longitude={longitude}&hourly=temperature_2m,rain,snowfall&forecast_days=1");
+                if (tempData != null)
                 {
-                    Console.WriteLine($"Time: {entry.Key}, Temperature: {entry.Value.Temperature}°C, Rain: {entry.Value.Rain}mm, Snow: {entry.Value.Snowfall}mm");
+                    // Format the JSON data
+                    string formattedJson = FormatJson(tempData);
+
+                    // Parse the JSON data and store it in a dictionary
+                    Dictionary<string, (double Temperature, double Rain, double Snowfall)> tempDictionary = ParseWeatherData(tempData);
+
+                    // Print the dictionary contents to the console
+                    foreach (var entry in tempDictionary)
+                    {
+                        Console.WriteLine($"Time: {entry.Key}, Temperature: {entry.Value.Temperature}°C, Rain: {entry.Value.Rain}mm, Snow: {entry.Value.Snowfall}mm");
+                    }
                 }
             }
+            else
+            {
+                Console.WriteLine("Address not found.");
+            }
         }
-
 
         public static async Task<string> GetJsonAsync(string url)
         {
             try
             {
-                HttpResponseMessage response = await client.GetAsync(url);
+                HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, url);
+                request.Headers.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3");
+
+                HttpResponseMessage response = await client.SendAsync(request);
                 response.EnsureSuccessStatusCode();
                 string jsonData = await response.Content.ReadAsStringAsync();
                 return jsonData;
@@ -52,12 +64,30 @@ namespace ha_sus_ck_sex
             }
         }
 
+        public static async Task<(double?, double?)> GetCoordinatesAsync(string city)
+        {
+            string addressUrl = $"https://nominatim.openstreetmap.org/search?q={Uri.EscapeDataString(city)}&format=json&limit=1";
+            string responseContent = await GetJsonAsync(addressUrl);
+
+            if (responseContent != null)
+            {
+                JArray json = JArray.Parse(responseContent);
+                if (json.Count > 0)
+                {
+                    double latitude = (double)json[0]["lat"];
+                    double longitude = (double)json[0]["lon"];
+                    return (latitude, longitude);
+                }
+            }
+            return (null, null);
+        }
+
         private string FormatJson(string json)
         {
             try
             {
                 var parsedJson = JToken.Parse(json);
-                return parsedJson.ToString(Newtonsoft.Json.Formatting.Indented);
+                return parsedJson.ToString(Formatting.Indented);
             }
             catch (JsonReaderException e)
             {
